@@ -27,7 +27,7 @@
             justify-content: center;
             align-items: center;
             padding: 20px;
-            overflow: hidden;
+            overflow-x: hidden;
         }
 
         @keyframes gradient {
@@ -38,7 +38,7 @@
 
         .container {
             width: 100%;
-            max-width: 800px;
+            max-width: 900px;
             background: rgba(255, 255, 255, 0.98);
             border-radius: 40px;
             padding: 50px;
@@ -47,6 +47,8 @@
             position: relative;
             overflow: hidden;
             animation: slideUp 0.8s ease-out;
+            max-height: 90vh;
+            overflow-y: auto;
         }
 
         @keyframes slideUp {
@@ -62,14 +64,14 @@
 
         .badge {
             display: inline-block;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #ff6b6b 0%, #ee5a52 50%, #ff006e 100%);
             color: white;
             padding: 12px 30px;
             border-radius: 50px;
             font-weight: 700;
             margin-bottom: 30px;
             font-size: 1.1rem;
-            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
+            box-shadow: 0 10px 25px rgba(255, 107, 107, 0.5);
             animation: bounce 2s infinite;
         }
 
@@ -80,7 +82,7 @@
 
         h1 {
             font-size: 4rem;
-            background: linear-gradient(135deg, #667eea, #764ba2, #f093fb);
+            background: linear-gradient(135deg, #ff006e, #ee5a52, #ffd60a, #00b4d8);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -90,13 +92,16 @@
         }
 
         @keyframes glow {
-            0%, 100% { filter: drop-shadow(0 0 10px rgba(102, 126, 234, 0.3)); }
-            50% { filter: drop-shadow(0 0 25px rgba(240, 147, 251, 0.5)); }
+            0%, 100% { filter: drop-shadow(0 0 10px rgba(255, 107, 107, 0.3)); }
+            50% { filter: drop-shadow(0 0 25px rgba(255, 215, 0, 0.5)); }
         }
 
         h2 {
             font-size: 2.2rem;
-            color: #667eea;
+            background: linear-gradient(135deg, #ff006e, #00b4d8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
             margin: 30px 0 20px 0;
         }
 
@@ -127,7 +132,7 @@
         }
 
         .btn {
-            background: linear-gradient(135deg, #667eea, #764ba2);
+            background: linear-gradient(135deg, #ff006e, #ee5a52);
             color: white;
             border: none;
             padding: 15px 35px;
@@ -136,14 +141,14 @@
             border-radius: 50px;
             cursor: pointer;
             transition: all 0.3s ease;
-            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
+            box-shadow: 0 10px 25px rgba(255, 107, 107, 0.4);
             text-transform: uppercase;
             letter-spacing: 1px;
         }
 
         .btn:hover {
             transform: translateY(-5px);
-            box-shadow: 0 15px 40px rgba(102, 126, 234, 0.6);
+            box-shadow: 0 15px 40px rgba(255, 107, 107, 0.6);
         }
 
         .screen {
@@ -166,10 +171,23 @@
             }
         }
 
-        .games-container {
-            margin: 30px 0;
+        .progress-bar {
+            width: 100%;
+            height: 10px;
+            background: #e0e0e0;
+            border-radius: 10px;
+            margin: 20px 0;
+            overflow: hidden;
         }
 
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #ff006e, #00b4d8);
+            width: 0%;
+            transition: width 0.3s ease;
+        }
+
+        /* GAME 1: BALLOON POP */
         .balloon-container {
             display: flex;
             justify-content: center;
@@ -182,7 +200,7 @@
             width: 70px;
             height: 90px;
             border-radius: 50% 50% 45% 45%;
-            background: linear-gradient(135deg, #667eea, #764ba2);
+            background: linear-gradient(135deg, #ff006e, #ee5a52);
             cursor: pointer;
             display: flex;
             align-items: center;
@@ -218,6 +236,7 @@
             100% { transform: scale(0); opacity: 0; }
         }
 
+        /* GAME 2: CAKE & CANDLE */
         .cake {
             font-size: 150px;
             cursor: pointer;
@@ -252,6 +271,7 @@
             50% { transform: translateX(-50%) scaleY(1.2); opacity: 0.8; }
         }
 
+        /* GAME 3: QUIZ */
         .quiz-options {
             display: flex;
             flex-direction: column;
@@ -260,8 +280,8 @@
         }
 
         .quiz-btn {
-            background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(240, 147, 251, 0.1));
-            border: 3px solid #667eea;
+            background: linear-gradient(135deg, rgba(255, 0, 110, 0.1), rgba(238, 90, 82, 0.1));
+            border: 3px solid #ff006e;
             padding: 18px;
             border-radius: 12px;
             cursor: pointer;
@@ -272,11 +292,160 @@
         }
 
         .quiz-btn:hover {
-            background: linear-gradient(135deg, #667eea, #764ba2);
+            background: linear-gradient(135deg, #ff006e, #ee5a52);
             color: white;
             transform: translateX(10px);
         }
 
+        /* GAME 4: MEMORY MATCH */
+        .memory-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 12px;
+            margin: 25px auto;
+            max-width: 350px;
+        }
+
+        .memory-card {
+            aspect-ratio: 1;
+            background: linear-gradient(135deg, #ff006e, #ee5a52);
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: white;
+            transition: all 0.3s;
+            box-shadow: 0 8px 20px rgba(255, 107, 107, 0.3);
+        }
+
+        .memory-card:hover:not(.matched):not(.flipped) {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 12px 30px rgba(255, 107, 107, 0.5);
+        }
+
+        .memory-card.flipped {
+            background: linear-gradient(135deg, #ffd60a, #ffbe0b);
+        }
+
+        .memory-card.matched {
+            background: linear-gradient(135deg, #06d6a0, #118ab2);
+            opacity: 0.8;
+        }
+
+        /* GAME 5: SPEED CLICKER */
+        .clicker-box {
+            width: 180px;
+            height: 180px;
+            margin: 35px auto;
+            background: linear-gradient(135deg, #ff006e, #ee5a52);
+            border-radius: 30px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            transition: all 0.2s;
+            box-shadow: 0 20px 50px rgba(255, 107, 107, 0.4);
+            user-select: none;
+        }
+
+        .clicker-box:hover {
+            transform: scale(1.05);
+        }
+
+        .clicker-box.clicked {
+            animation: clickPulse 0.4s ease-out;
+        }
+
+        @keyframes clickPulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); }
+        }
+
+        /* GAME 6: PUZZLE SLIDE */
+        .slider-container {
+            width: 100%;
+            margin: 30px 0;
+        }
+
+        .slider {
+            width: 100%;
+            height: 20px;
+            border-radius: 10px;
+            background: linear-gradient(90deg, #ff006e, #00b4d8);
+            outline: none;
+            -webkit-appearance: none;
+            appearance: none;
+        }
+
+        .slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #ffd60a, #ffbe0b);
+            cursor: pointer;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .slider::-moz-range-thumb {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #ffd60a, #ffbe0b);
+            cursor: pointer;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            border: none;
+        }
+
+        /* GAME 7: BUTTON SEQUENCE */
+        .sequence-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin: 25px auto;
+            max-width: 300px;
+        }
+
+        .seq-btn {
+            padding: 30px;
+            border: none;
+            border-radius: 12px;
+            font-size: 2rem;
+            cursor: pointer;
+            transition: all 0.2s;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            font-weight: bold;
+            color: white;
+        }
+
+        .seq-btn:nth-child(1) { background: linear-gradient(135deg, #ff006e, #ee5a52); }
+        .seq-btn:nth-child(2) { background: linear-gradient(135deg, #ffd60a, #ffbe0b); }
+        .seq-btn:nth-child(3) { background: linear-gradient(135deg, #06d6a0, #118ab2); }
+        .seq-btn:nth-child(4) { background: linear-gradient(135deg, #9d4edd, #7209b7); }
+
+        .seq-btn:hover {
+            transform: scale(1.1);
+        }
+
+        .seq-btn:active {
+            transform: scale(0.95);
+        }
+
+        .seq-btn.active {
+            animation: buttonFlash 0.3s ease-out;
+        }
+
+        @keyframes buttonFlash {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); }
+        }
+
+        /* FINAL SCREEN */
         .final-hearts {
             font-size: 3rem;
             margin: 20px 0;
@@ -292,14 +461,14 @@
         .status {
             font-size: 1.1rem;
             font-weight: 700;
-            color: #667eea;
+            color: #ff006e;
             margin: 20px 0;
             min-height: 25px;
         }
 
         .from-text {
             font-size: 1.3rem;
-            color: #764ba2;
+            color: #ee5a52;
             font-weight: 800;
             margin: 20px 0;
         }
@@ -340,6 +509,16 @@
                 font-size: 40px;
                 top: -35px;
             }
+
+            .clicker-box {
+                width: 150px;
+                height: 150px;
+                font-size: 3rem;
+            }
+
+            .memory-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
         }
     </style>
 </head>
@@ -348,87 +527,169 @@
         <!-- SCREEN 1: Welcome -->
         <div id="screen1" class="screen active">
             <div class="badge">📩 Abisha sent you this message! 💝</div>
-            <h1>🎉 Hey Aswin! 🎉</h1>
-            <p style="font-size: 1.3rem; color: #667eea; font-weight: 700;">You have a SPECIAL birthday delivery!</p>
-            <p>From your friend <span style="color: #764ba2; font-weight: 800;">Abisha</span> with lots of love 💕</p>
-            <div class="emoji-large">🎂 🎈 🎁 🎊</div>
-            <p>Complete 5 FUN challenges to unlock your special birthday wishes! 🚀</p>
+            <h1>🎉 HAPPY BIRTHDAY ASWIN! 🎉</h1>
+            <p style="font-size: 1.3rem; color: #ff006e; font-weight: 700;">You have a LEGENDARY birthday delivery!</p>
+            <p>From your friend <span style="color: #ee5a52; font-weight: 800;">Abisha</span> with TONS of love 💕</p>
+            <div class="emoji-large">🎂 🎈 🎁 🎊 🎉</div>
+            <p style="font-size: 1.15rem; font-weight: 600;">Complete 7 EPIC CHALLENGES to unlock your special birthday wishes!</p>
+            <p style="font-size: 0.95rem; color: #999;">This birthday celebration will be UNFORGETTABLE! 🚀</p>
             <div class="buttons">
-                <button class="btn" onclick="goToScreen(2)">Let's Begin! 🎮</button>
+                <button class="btn" onclick="goToScreen(2)">LET'S GO! 🎮</button>
+            </div>
+            <div class="progress-bar">
+                <div class="progress-fill" style="width: 0%;"></div>
             </div>
         </div>
 
         <!-- SCREEN 2: Balloon Pop -->
         <div id="screen2" class="screen">
             <h2>🎈 Challenge 1: Pop the Balloons! 🎈</h2>
-            <p>Pop all 5 balloons to unlock the next challenge!</p>
+            <p>Pop all 8 balloons to unlock the next challenge!</p>
             <div class="balloon-container">
                 <div class="balloon" onclick="popBalloon(this)">🎈</div>
                 <div class="balloon" onclick="popBalloon(this)">🎈</div>
                 <div class="balloon" onclick="popBalloon(this)">🎈</div>
                 <div class="balloon" onclick="popBalloon(this)">🎈</div>
                 <div class="balloon" onclick="popBalloon(this)">🎈</div>
+                <div class="balloon" onclick="popBalloon(this)">🎈</div>
+                <div class="balloon" onclick="popBalloon(this)">🎈</div>
+                <div class="balloon" onclick="popBalloon(this)">🎈</div>
             </div>
-            <p class="status" id="balloonStatus">5 Balloons Left! 🎯</p>
+            <p class="status" id="balloonStatus">8 Balloons Left! 🎯</p>
+            <div class="progress-bar">
+                <div class="progress-fill" style="width: 15%;"></div>
+            </div>
         </div>
 
-        <!-- SCREEN 3: Quiz -->
+        <!-- SCREEN 3: Cake & Candle -->
         <div id="screen3" class="screen">
-            <h2>🧠 Challenge 2: Birthday Quiz! 🧠</h2>
-            <p>What's the #1 rule for YOUR birthday today?</p>
-            <div class="quiz-options">
-                <button class="quiz-btn" onclick="answerQuiz(true)">✅ Have unlimited fun & zero stress!</button>
-                <button class="quiz-btn" onclick="answerQuiz(false)">❌ Work all day long</button>
-                <button class="quiz-btn" onclick="answerQuiz(false)">❌ Study hard!</button>
-            </div>
-            <p class="status" id="quizStatus"></p>
-        </div>
-
-        <!-- SCREEN 4: Cake & Candle -->
-        <div id="screen4" class="screen">
-            <h2>🕯️ Challenge 3: Make a Wish! 🕯️</h2>
+            <h2>🕯️ Challenge 2: Make a Wish! 🕯️</h2>
             <p>Click the flame to blow out the candle and make your wish!</p>
             <div onclick="blowCandle()">
                 <span id="flame" class="flame">🔥</span>
                 <div class="cake">🎂</div>
             </div>
             <p class="status" id="candleStatus">Click the flame! ⬆️</p>
+            <div class="progress-bar">
+                <div class="progress-fill" style="width: 30%;"></div>
+            </div>
         </div>
 
-        <!-- SCREEN 5: Final Screen -->
+        <!-- SCREEN 4: Quiz -->
+        <div id="screen4" class="screen">
+            <h2>🧠 Challenge 3: Birthday Quiz! 🧠</h2>
+            <p>What's the #1 rule for YOUR birthday today?</p>
+            <div class="quiz-options">
+                <button class="quiz-btn" onclick="answerQuiz(true)">✅ Have unlimited fun & zero stress!</button>
+                <button class="quiz-btn" onclick="answerQuiz(false)">❌ Work all day long</button>
+                <button class="quiz-btn" onclick="answerQuiz(false)">❌ Study hard!</button>
+                <button class="quiz-btn" onclick="answerQuiz(false)">❌ No fun allowed</button>
+            </div>
+            <p class="status" id="quizStatus"></p>
+            <div class="progress-bar">
+                <div class="progress-fill" style="width: 45%;"></div>
+            </div>
+        </div>
+
+        <!-- SCREEN 5: Memory Match -->
         <div id="screen5" class="screen">
-            <p style="font-size: 1.3rem; font-weight: 700; color: #667eea; margin-bottom: 20px;">🎉 YOU DID IT! 🎉</p>
-            <h1 style="font-size: 3.5rem;">HAPPY BIRTHDAY ASWIN 💙</h1>
-            <div class="final-hearts">💝 💕 💖 💗 💓</div>
-            <p class="from-text">With Love From: Abisha 💕</p>
-            <p class="message-text">Hope your day is filled with joy, laughter, amazing moments, and everything you love! 🌟</p>
-            <p style="color: #667eea; font-weight: 700; font-size: 1.1rem; margin: 20px 0;">You deserve the BEST birthday ever! 🚀✨</p>
-            <div class="emoji-large">🎊 ✨ 🌈</div>
+            <h2>🧩 Challenge 4: Memory Master! 🧩</h2>
+            <p>Find all matching pairs to proceed!</p>
+            <div class="memory-grid" id="memoryGrid"></div>
+            <p class="status" id="memoryStatus">Find all pairs!</p>
+            <div class="progress-bar">
+                <div class="progress-fill" style="width: 60%;"></div>
+            </div>
+        </div>
+
+        <!-- SCREEN 6: Speed Clicker -->
+        <div id="screen6" class="screen">
+            <h2>⚡ Challenge 5: Speed Clicker! ⚡</h2>
+            <p>Click the box 15 times as fast as you can!</p>
+            <div class="clicker-box" id="clickBox" onclick="handleClick()">👆</div>
+            <p class="status" id="clickCounter">0 / 15</p>
+            <div class="progress-bar">
+                <div class="progress-fill" style="width: 75%;"></div>
+            </div>
+        </div>
+
+        <!-- SCREEN 7: Slider Challenge -->
+        <div id="screen7" class="screen">
+            <h2>🎚️ Challenge 6: Slide to Win! 🎚️</h2>
+            <p>Drag the slider all the way to the right!</p>
+            <div class="slider-container">
+                <input type="range" min="0" max="100" value="0" class="slider" id="sliderInput" oninput="checkSlider()">
+            </div>
+            <p class="status" id="sliderStatus">Slide it! 📊</p>
+            <div class="progress-bar">
+                <div class="progress-fill" style="width: 85%;"></div>
+            </div>
+        </div>
+
+        <!-- SCREEN 8: Button Sequence -->
+        <div id="screen8" class="screen">
+            <h2>🎮 Challenge 7: Button Sequence! 🎮</h2>
+            <p>Click the buttons in order: RED → YELLOW → GREEN → BLUE!</p>
+            <div class="sequence-grid">
+                <button class="seq-btn" onclick="clickSequence(1)">1️⃣</button>
+                <button class="seq-btn" onclick="clickSequence(2)">2️⃣</button>
+                <button class="seq-btn" onclick="clickSequence(3)">3️⃣</button>
+                <button class="seq-btn" onclick="clickSequence(4)">4️⃣</button>
+            </div>
+            <p class="status" id="sequenceStatus">Click in order!</p>
+            <div class="progress-bar">
+                <div class="progress-fill" style="width: 100%;"></div>
+            </div>
+        </div>
+
+        <!-- SCREEN 9: Final Screen -->
+        <div id="screen9" class="screen">
+            <p style="font-size: 1.3rem; font-weight: 700; color: #ff006e; margin-bottom: 20px;">🎉 YOU COMPLETED ALL CHALLENGES! 🎉</p>
+            <h1 style="font-size: 3.8rem;">HAPPY BIRTHDAY ASWIN 💙</h1>
+            <div class="final-hearts">💝 💕 💖 💗 💓 💘 💞</div>
+            <p class="from-text">With ENDLESS Love From: Abisha 💕</p>
+            <p class="message-text">Hope your day is filled with AMAZING joy, endless laughter, incredible moments, and everything you love! 🌟</p>
+            <p style="color: #ff006e; font-weight: 700; font-size: 1.2rem; margin: 20px 0;">You deserve the ABSOLUTE BEST birthday ever! 🚀✨</p>
+            <p style="color: #ee5a52; font-weight: 600; font-size: 1.05rem;">This is a day you'll NEVER FORGET! 🎊</p>
+            <div class="emoji-large">🎊 ✨ 🌈 🎆 🎇</div>
             <div class="buttons">
-                <button class="btn" onclick="triggerConfetti()">CONFETTI! 🎊</button>
-                <button class="btn" onclick="location.reload()">Again! 🔄</button>
+                <button class="btn" onclick="triggerMassiveConfetti()">MASSIVE CONFETTI! 🎊🎊🎊</button>
+                <button class="btn" onclick="location.reload()">Play Again! 🔄</button>
             </div>
         </div>
     </div>
 
     <script>
-        let balloonsLeft = 5;
+        let balloonsLeft = 8;
         let quizAnswered = false;
         let candleBlown = false;
+        let memoryCards = [];
+        let flippedCards = [];
+        let matchedPairs = 0;
+        let clickCount = 0;
+        let sequenceStep = 1;
+
+        function updateProgress(percent) {
+            const fills = document.querySelectorAll('.progress-fill');
+            fills.forEach(fill => {
+                fill.style.width = percent + '%';
+            });
+        }
 
         function goToScreen(screenNum) {
             document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
             document.getElementById(`screen${screenNum}`).classList.add('active');
             if (screenNum === 2) {
-                confetti({ particleCount: 100, spread: 70, origin: { y: 0.6 } });
+                confetti({ particleCount: 150, spread: 80, origin: { y: 0.6 } });
             }
         }
 
+        // GAME 1: Balloon Pop
         function popBalloon(element) {
             if (!element.classList.contains('popped')) {
                 element.classList.add('popped');
                 balloonsLeft--;
-                document.getElementById('balloonStatus').textContent = balloonsLeft === 0 ? '🎉 LEVEL COMPLETE!' : `${balloonsLeft} Balloons Left! 🎯`;
+                document.getElementById('balloonStatus').textContent = balloonsLeft === 0 ? '🎉 LEVEL COMPLETE! 🎉' : `${balloonsLeft} Balloons Left! 🎯`;
                 confetti({ particleCount: 40, spread: 50, origin: { y: 0.7 } });
 
                 if (balloonsLeft === 0) {
@@ -437,6 +698,21 @@
             }
         }
 
+        // GAME 2: Blow Candle
+        function blowCandle() {
+            if (!candleBlown) {
+                candleBlown = true;
+                const flame = document.getElementById('flame');
+                flame.style.display = 'none';
+                document.getElementById('candleStatus').textContent = '✨ Wish Made! Dreams coming true! ✨';
+                document.getElementById('candleStatus').style.color = '#ff006e';
+                document.getElementById('candleStatus').style.fontSize = '1.15rem';
+                confetti({ particleCount: 80, spread: 75, origin: { y: 0.5 } });
+                setTimeout(() => goToScreen(4), 1500);
+            }
+        }
+
+        // GAME 3: Quiz
         function answerQuiz(isCorrect) {
             if (quizAnswered) return;
             quizAnswered = true;
@@ -444,10 +720,11 @@
 
             if (isCorrect) {
                 status.textContent = '✅ CORRECT! You get unlimited fun today!';
-                status.style.color = '#10b981';
+                status.style.color = '#06d6a0';
                 status.style.fontSize = '1.2rem';
                 confetti({ particleCount: 60, spread: 60, origin: { y: 0.7 } });
-                setTimeout(() => goToScreen(4), 1200);
+                setTimeout(() => initMemory(), 800);
+                setTimeout(() => goToScreen(5), 800);
             } else {
                 status.textContent = '❌ Try again!';
                 status.style.color = '#ef4444';
@@ -456,34 +733,137 @@
             }
         }
 
-        function blowCandle() {
-            if (!candleBlown) {
-                candleBlown = true;
-                const flame = document.getElementById('flame');
-                flame.style.display = 'none';
-                document.getElementById('candleStatus').textContent = '✨ Wish Made! Your dreams are coming true! ✨';
-                document.getElementById('candleStatus').style.color = '#764ba2';
-                document.getElementById('candleStatus').style.fontSize = '1.15rem';
-                confetti({ particleCount: 80, spread: 75, origin: { y: 0.5 } });
-                setTimeout(() => goToScreen(5), 1500);
+        // GAME 4: Memory Match
+        function initMemory() {
+            const emojis = ['🎂', '🎈', '🎁', '🎊', '🎂', '🎈', '🎁', '🎊'];
+            memoryCards = emojis.sort(() => Math.random() - 0.5);
+            matchedPairs = 0;
+            flippedCards = [];
+
+            const grid = document.getElementById('memoryGrid');
+            grid.innerHTML = '';
+
+            memoryCards.forEach((emoji, index) => {
+                const card = document.createElement('button');
+                card.className = 'memory-card';
+                card.textContent = '?';
+                card.dataset.emoji = emoji;
+                card.dataset.index = index;
+                card.onclick = () => flipCard(card);
+                grid.appendChild(card);
+            });
+        }
+
+        function flipCard(card) {
+            if (flippedCards.length < 2 && !card.classList.contains('flipped') && !card.classList.contains('matched')) {
+                card.classList.add('flipped');
+                card.textContent = card.dataset.emoji;
+                flippedCards.push(card);
+
+                if (flippedCards.length === 2) {
+                    checkMatch();
+                }
             }
         }
 
-        function triggerConfetti() {
-            var duration = 5 * 1000;
+        function checkMatch() {
+            const [card1, card2] = flippedCards;
+            const match = card1.dataset.emoji === card2.dataset.emoji;
+
+            setTimeout(() => {
+                if (match) {
+                    card1.classList.add('matched');
+                    card2.classList.add('matched');
+                    matchedPairs++;
+                    confetti({ particleCount: 50, spread: 60, origin: { y: 0.7 } });
+
+                    if (matchedPairs === 4) {
+                        document.getElementById('memoryStatus').textContent = '🎉 Perfect Match!';
+                        setTimeout(() => goToScreen(6), 1000);
+                    }
+                } else {
+                    card1.classList.remove('flipped');
+                    card2.classList.remove('flipped');
+                    card1.textContent = '?';
+                    card2.textContent = '?';
+                }
+                flippedCards = [];
+            }, 600);
+        }
+
+        // GAME 5: Speed Clicker
+        function handleClick() {
+            clickCount++;
+            const box = document.getElementById('clickBox');
+            box.classList.add('clicked');
+            setTimeout(() => box.classList.remove('clicked'), 200);
+
+            document.getElementById('clickCounter').textContent = `${clickCount} / 15`;
+
+            if (clickCount === 15) {
+                document.getElementById('clickBox').style.pointerEvents = 'none';
+                document.getElementById('clickCounter').textContent = '🎉 Complete!';
+                confetti({ particleCount: 150, spread: 100, origin: { y: 0.6 } });
+                setTimeout(() => goToScreen(7), 1200);
+            }
+        }
+
+        // GAME 6: Slider
+        function checkSlider() {
+            const slider = document.getElementById('sliderInput');
+            const status = document.getElementById('sliderStatus');
+            
+            if (slider.value >= 100) {
+                status.textContent = '✅ PERFECT! You won! 🎉';
+                status.style.color = '#06d6a0';
+                status.style.fontSize = '1.2rem';
+                slider.style.pointerEvents = 'none';
+                confetti({ particleCount: 100, spread: 80, origin: { y: 0.6 } });
+                setTimeout(() => goToScreen(8), 1200);
+            } else {
+                status.textContent = `Progress: ${slider.value}%`;
+            }
+        }
+
+        // GAME 7: Sequence
+        function clickSequence(num) {
+            const btn = event.target;
+            btn.classList.add('active');
+            setTimeout(() => btn.classList.remove('active'), 200);
+
+            if (num === sequenceStep) {
+                sequenceStep++;
+                if (sequenceStep > 4) {
+                    document.getElementById('sequenceStatus').textContent = '🎉 PERFECT SEQUENCE! 🎉';
+                    document.getElementById('sequenceStatus').style.color = '#06d6a0';
+                    document.getElementById('sequenceStatus').style.fontSize = '1.2rem';
+                    document.querySelectorAll('.seq-btn').forEach(b => b.style.pointerEvents = 'none');
+                    confetti({ particleCount: 120, spread: 90, origin: { y: 0.6 } });
+                    setTimeout(() => goToScreen(9), 1500);
+                }
+            } else {
+                document.getElementById('sequenceStatus').textContent = '❌ Wrong order! Try again!';
+                document.getElementById('sequenceStatus').style.color = '#ef4444';
+                sequenceStep = 1;
+            }
+        }
+
+        // Final Confetti
+        function triggerMassiveConfetti() {
+            var duration = 8 * 1000;
             var animationEnd = Date.now() + duration;
-            var defaults = { startVelocity: 45, spread: 360, ticks: 80, zIndex: 0 };
+            var defaults = { startVelocity: 60, spread: 360, ticks: 100, zIndex: 0 };
 
             var interval = setInterval(function() {
                 var timeLeft = animationEnd - Date.now();
                 if (timeLeft <= 0) return clearInterval(interval);
 
-                var particleCount = 80 * (timeLeft / duration);
+                var particleCount = 150 * (timeLeft / duration);
                 confetti(Object.assign({}, defaults, {
                     particleCount,
                     origin: { x: Math.random(), y: Math.random() - 0.2 }
                 }));
-            }, 150);
+            }, 100);
         }
     </script>
 </body>
