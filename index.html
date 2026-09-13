@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>🎂 Happy Birthday Aswin! 🎂</title>
+    <title>🎂 ULTIMATE Happy Birthday Aswin! 🎂</title>
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
     <style>
         * {
@@ -19,9 +19,9 @@
 
         body {
             font-family: 'Poppins', 'Arial', sans-serif;
-            background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-            background-size: 400% 400%;
-            animation: gradient 15s ease infinite;
+            background: linear-gradient(-45deg, #ff006e, #ffbe0b, #06d6a0, #00b4d8, #9d4edd);
+            background-size: 500% 500%;
+            animation: gradient 20s ease infinite;
             min-height: 100vh;
             display: flex;
             justify-content: center;
@@ -38,66 +38,61 @@
 
         .container {
             width: 100%;
-            max-width: 900px;
+            max-width: 950px;
             background: rgba(255, 255, 255, 0.98);
-            border-radius: 40px;
-            padding: 50px;
-            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3);
+            border-radius: 45px;
+            padding: 55px;
+            box-shadow: 0 40px 80px rgba(0, 0, 0, 0.4);
             text-align: center;
             position: relative;
             overflow: hidden;
             animation: slideUp 0.8s ease-out;
-            max-height: 90vh;
+            max-height: 95vh;
             overflow-y: auto;
+            border: 3px solid rgba(255, 0, 110, 0.3);
         }
 
         @keyframes slideUp {
-            from {
-                opacity: 0;
-                transform: translateY(50px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+            from { opacity: 0; transform: translateY(60px); }
+            to { opacity: 1; transform: translateY(0); }
         }
 
         .badge {
             display: inline-block;
-            background: linear-gradient(135deg, #ff6b6b 0%, #ee5a52 50%, #ff006e 100%);
+            background: linear-gradient(135deg, #ff006e 0%, #ee5a52 50%, #ffbe0b 100%);
             color: white;
-            padding: 12px 30px;
+            padding: 14px 35px;
             border-radius: 50px;
-            font-weight: 700;
+            font-weight: 800;
             margin-bottom: 30px;
-            font-size: 1.1rem;
-            box-shadow: 0 10px 25px rgba(255, 107, 107, 0.5);
-            animation: bounce 2s infinite;
+            font-size: 1.15rem;
+            box-shadow: 0 15px 35px rgba(255, 0, 110, 0.6);
+            animation: pulse 2s infinite;
         }
 
-        @keyframes bounce {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-10px); }
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
         }
 
         h1 {
-            font-size: 4rem;
-            background: linear-gradient(135deg, #ff006e, #ee5a52, #ffd60a, #00b4d8);
+            font-size: 4.5rem;
+            background: linear-gradient(135deg, #ff006e, #ee5a52, #ffbe0b, #06d6a0, #00b4d8);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
             margin: 20px 0;
             font-weight: 900;
-            animation: glow 2s ease-in-out infinite;
+            animation: megaGlow 3s ease-in-out infinite;
         }
 
-        @keyframes glow {
-            0%, 100% { filter: drop-shadow(0 0 10px rgba(255, 107, 107, 0.3)); }
-            50% { filter: drop-shadow(0 0 25px rgba(255, 215, 0, 0.5)); }
+        @keyframes megaGlow {
+            0%, 100% { filter: drop-shadow(0 0 15px rgba(255, 0, 110, 0.4)); }
+            50% { filter: drop-shadow(0 0 40px rgba(255, 190, 11, 0.6)); }
         }
 
         h2 {
-            font-size: 2.2rem;
+            font-size: 2.3rem;
             background: linear-gradient(135deg, #ff006e, #00b4d8);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -112,15 +107,30 @@
             margin: 15px 0;
         }
 
+        .challenge-number {
+            display: inline-block;
+            background: linear-gradient(135deg, #ff006e, #ee5a52);
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 800;
+            margin-bottom: 15px;
+        }
+
         .emoji-large {
-            font-size: 3rem;
+            font-size: 3.5rem;
             margin: 20px 0;
             animation: float 3s ease-in-out infinite;
         }
 
         @keyframes float {
             0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-20px); }
+            50% { transform: translateY(-25px); }
         }
 
         .buttons {
@@ -135,20 +145,20 @@
             background: linear-gradient(135deg, #ff006e, #ee5a52);
             color: white;
             border: none;
-            padding: 15px 35px;
-            font-size: 1rem;
-            font-weight: 700;
+            padding: 16px 40px;
+            font-size: 1.05rem;
+            font-weight: 800;
             border-radius: 50px;
             cursor: pointer;
             transition: all 0.3s ease;
-            box-shadow: 0 10px 25px rgba(255, 107, 107, 0.4);
+            box-shadow: 0 12px 30px rgba(255, 107, 107, 0.5);
             text-transform: uppercase;
-            letter-spacing: 1px;
+            letter-spacing: 1.5px;
         }
 
         .btn:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 40px rgba(255, 107, 107, 0.6);
+            transform: translateY(-6px) scale(1.05);
+            box-shadow: 0 18px 45px rgba(255, 107, 107, 0.7);
         }
 
         .screen {
@@ -161,44 +171,39 @@
         }
 
         @keyframes slideIn {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
         }
 
         .progress-bar {
             width: 100%;
-            height: 10px;
+            height: 12px;
             background: #e0e0e0;
             border-radius: 10px;
-            margin: 20px 0;
+            margin: 25px 0;
             overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
         }
 
         .progress-fill {
             height: 100%;
-            background: linear-gradient(90deg, #ff006e, #00b4d8);
+            background: linear-gradient(90deg, #ff006e, #ffbe0b, #06d6a0, #00b4d8);
             width: 0%;
-            transition: width 0.3s ease;
+            transition: width 0.4s ease;
         }
 
         /* GAME 1: BALLOON POP */
         .balloon-container {
             display: flex;
             justify-content: center;
-            gap: 15px;
+            gap: 12px;
             flex-wrap: wrap;
             margin: 30px 0;
         }
 
         .balloon {
-            width: 70px;
-            height: 90px;
+            width: 75px;
+            height: 95px;
             border-radius: 50% 50% 45% 45%;
             background: linear-gradient(135deg, #ff006e, #ee5a52);
             cursor: pointer;
@@ -207,23 +212,23 @@
             justify-content: center;
             font-size: 2.5rem;
             transition: transform 0.2s;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 10px 25px rgba(255, 0, 110, 0.3);
             position: relative;
         }
 
         .balloon::before {
             content: '';
             position: absolute;
-            bottom: -25px;
+            bottom: -28px;
             left: 50%;
             width: 2px;
-            height: 25px;
+            height: 28px;
             background: rgba(0, 0, 0, 0.3);
             transform: translateX(-50%);
         }
 
         .balloon:hover {
-            transform: scale(1.15) translateY(-10px);
+            transform: scale(1.2) translateY(-12px);
         }
 
         .balloon.popped {
@@ -232,17 +237,17 @@
 
         @keyframes pop {
             0% { transform: scale(1); opacity: 1; }
-            50% { transform: scale(1.3); }
+            50% { transform: scale(1.4); }
             100% { transform: scale(0); opacity: 0; }
         }
 
-        /* GAME 2: CAKE & CANDLE */
+        /* GAME 2: CAKE */
         .cake {
-            font-size: 150px;
+            font-size: 160px;
             cursor: pointer;
             display: inline-block;
             animation: wiggle 1s infinite;
-            filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.2));
+            filter: drop-shadow(0 12px 35px rgba(0, 0, 0, 0.25));
             position: relative;
             margin: 30px 0;
         }
@@ -253,39 +258,39 @@
 
         @keyframes wiggle {
             0%, 100% { transform: rotate(0deg); }
-            25% { transform: rotate(-3deg); }
-            75% { transform: rotate(3deg); }
+            25% { transform: rotate(-4deg); }
+            75% { transform: rotate(4deg); }
         }
 
         .flame {
             position: absolute;
-            top: -50px;
+            top: -55px;
             left: 50%;
             transform: translateX(-50%);
-            font-size: 60px;
+            font-size: 65px;
             animation: flicker 0.4s infinite;
         }
 
         @keyframes flicker {
             0%, 100% { transform: translateX(-50%) scaleY(1); opacity: 1; }
-            50% { transform: translateX(-50%) scaleY(1.2); opacity: 0.8; }
+            50% { transform: translateX(-50%) scaleY(1.25); opacity: 0.8; }
         }
 
         /* GAME 3: QUIZ */
         .quiz-options {
             display: flex;
             flex-direction: column;
-            gap: 12px;
+            gap: 14px;
             margin: 25px 0;
         }
 
         .quiz-btn {
             background: linear-gradient(135deg, rgba(255, 0, 110, 0.1), rgba(238, 90, 82, 0.1));
             border: 3px solid #ff006e;
-            padding: 18px;
-            border-radius: 12px;
+            padding: 20px;
+            border-radius: 14px;
             cursor: pointer;
-            font-size: 1.05rem;
+            font-size: 1.08rem;
             font-weight: 600;
             color: #555;
             transition: all 0.3s ease;
@@ -294,64 +299,64 @@
         .quiz-btn:hover {
             background: linear-gradient(135deg, #ff006e, #ee5a52);
             color: white;
-            transform: translateX(10px);
+            transform: translateX(12px) scale(1.02);
         }
 
         /* GAME 4: MEMORY MATCH */
         .memory-grid {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
-            gap: 12px;
-            margin: 25px auto;
-            max-width: 350px;
+            gap: 13px;
+            margin: 28px auto;
+            max-width: 380px;
         }
 
         .memory-card {
             aspect-ratio: 1;
             background: linear-gradient(135deg, #ff006e, #ee5a52);
             border: none;
-            border-radius: 12px;
+            border-radius: 14px;
             cursor: pointer;
-            font-size: 1.8rem;
+            font-size: 2rem;
             font-weight: bold;
             color: white;
             transition: all 0.3s;
-            box-shadow: 0 8px 20px rgba(255, 107, 107, 0.3);
+            box-shadow: 0 10px 25px rgba(255, 107, 107, 0.3);
         }
 
         .memory-card:hover:not(.matched):not(.flipped) {
-            transform: translateY(-5px) scale(1.05);
-            box-shadow: 0 12px 30px rgba(255, 107, 107, 0.5);
+            transform: translateY(-8px) scale(1.08);
+            box-shadow: 0 15px 40px rgba(255, 107, 107, 0.5);
         }
 
         .memory-card.flipped {
-            background: linear-gradient(135deg, #ffd60a, #ffbe0b);
+            background: linear-gradient(135deg, #ffbe0b, #ffc300);
         }
 
         .memory-card.matched {
             background: linear-gradient(135deg, #06d6a0, #118ab2);
-            opacity: 0.8;
+            opacity: 0.85;
         }
 
         /* GAME 5: SPEED CLICKER */
         .clicker-box {
-            width: 180px;
-            height: 180px;
-            margin: 35px auto;
+            width: 190px;
+            height: 190px;
+            margin: 40px auto;
             background: linear-gradient(135deg, #ff006e, #ee5a52);
-            border-radius: 30px;
+            border-radius: 35px;
             cursor: pointer;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 4rem;
+            font-size: 4.5rem;
             transition: all 0.2s;
-            box-shadow: 0 20px 50px rgba(255, 107, 107, 0.4);
+            box-shadow: 0 25px 55px rgba(255, 107, 107, 0.4);
             user-select: none;
         }
 
         .clicker-box:hover {
-            transform: scale(1.05);
+            transform: scale(1.08);
         }
 
         .clicker-box.clicked {
@@ -360,19 +365,19 @@
 
         @keyframes clickPulse {
             0% { transform: scale(1); }
-            50% { transform: scale(1.2); }
+            50% { transform: scale(1.25); }
             100% { transform: scale(1); }
         }
 
-        /* GAME 6: PUZZLE SLIDE */
+        /* GAME 6: SLIDER */
         .slider-container {
             width: 100%;
-            margin: 30px 0;
+            margin: 35px 0;
         }
 
         .slider {
             width: 100%;
-            height: 20px;
+            height: 22px;
             border-radius: 10px;
             background: linear-gradient(90deg, #ff006e, #00b4d8);
             outline: none;
@@ -383,56 +388,52 @@
         .slider::-webkit-slider-thumb {
             -webkit-appearance: none;
             appearance: none;
-            width: 40px;
-            height: 40px;
+            width: 45px;
+            height: 45px;
             border-radius: 50%;
-            background: linear-gradient(135deg, #ffd60a, #ffbe0b);
+            background: linear-gradient(135deg, #ffbe0b, #ffc300);
             cursor: pointer;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
         }
 
         .slider::-moz-range-thumb {
-            width: 40px;
-            height: 40px;
+            width: 45px;
+            height: 45px;
             border-radius: 50%;
-            background: linear-gradient(135deg, #ffd60a, #ffbe0b);
+            background: linear-gradient(135deg, #ffbe0b, #ffc300);
             cursor: pointer;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
             border: none;
         }
 
-        /* GAME 7: BUTTON SEQUENCE */
+        /* GAME 7: SEQUENCE */
         .sequence-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            gap: 15px;
-            margin: 25px auto;
-            max-width: 300px;
+            gap: 18px;
+            margin: 30px auto;
+            max-width: 320px;
         }
 
         .seq-btn {
-            padding: 30px;
+            padding: 35px;
             border: none;
-            border-radius: 12px;
-            font-size: 2rem;
+            border-radius: 14px;
+            font-size: 2.2rem;
             cursor: pointer;
             transition: all 0.2s;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
             font-weight: bold;
             color: white;
         }
 
         .seq-btn:nth-child(1) { background: linear-gradient(135deg, #ff006e, #ee5a52); }
-        .seq-btn:nth-child(2) { background: linear-gradient(135deg, #ffd60a, #ffbe0b); }
+        .seq-btn:nth-child(2) { background: linear-gradient(135deg, #ffbe0b, #ffc300); }
         .seq-btn:nth-child(3) { background: linear-gradient(135deg, #06d6a0, #118ab2); }
         .seq-btn:nth-child(4) { background: linear-gradient(135deg, #9d4edd, #7209b7); }
 
         .seq-btn:hover {
-            transform: scale(1.1);
-        }
-
-        .seq-btn:active {
-            transform: scale(0.95);
+            transform: scale(1.12);
         }
 
         .seq-btn.active {
@@ -441,43 +442,139 @@
 
         @keyframes buttonFlash {
             0% { transform: scale(1); }
-            50% { transform: scale(1.2); }
+            50% { transform: scale(1.25); }
             100% { transform: scale(1); }
+        }
+
+        /* GAME 8: TYPING CHALLENGE */
+        .typing-input {
+            font-size: 1.1rem;
+            padding: 15px;
+            border: 3px solid #ff006e;
+            border-radius: 12px;
+            width: 100%;
+            max-width: 350px;
+            margin: 20px auto;
+            display: block;
+            font-weight: 600;
+            color: #333;
+        }
+
+        .typing-input:focus {
+            outline: none;
+            box-shadow: 0 0 20px rgba(255, 0, 110, 0.4);
+        }
+
+        /* GAME 9: RAPID FIRE */
+        .rapid-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+            margin: 25px auto;
+            max-width: 350px;
+        }
+
+        .rapid-btn {
+            padding: 15px;
+            border: none;
+            border-radius: 12px;
+            font-size: 1.3rem;
+            cursor: pointer;
+            transition: all 0.2s;
+            font-weight: bold;
+            color: white;
+            background: linear-gradient(135deg, #ff006e, #ee5a52);
+            box-shadow: 0 8px 20px rgba(255, 107, 107, 0.3);
+        }
+
+        .rapid-btn:hover {
+            transform: scale(1.1);
+        }
+
+        .rapid-btn.correct {
+            animation: correctFlash 0.4s ease-out;
+        }
+
+        @keyframes correctFlash {
+            0% { background: linear-gradient(135deg, #06d6a0, #118ab2); transform: scale(1); }
+            50% { transform: scale(1.2); }
+            100% { background: linear-gradient(135deg, #ff006e, #ee5a52); transform: scale(1); }
+        }
+
+        /* GAME 10: LUCKY SPIN */
+        .spinner {
+            width: 200px;
+            height: 200px;
+            margin: 30px auto;
+            background: conic-gradient(#ff006e, #ffbe0b, #06d6a0, #00b4d8, #9d4edd, #ff006e);
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            transition: transform 0.3s;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+            position: relative;
+        }
+
+        .spinner:hover {
+            transform: scale(1.08);
+        }
+
+        .spinner.spinning {
+            animation: spin 2s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(1800deg); }
+        }
+
+        .spinner::after {
+            content: '';
+            position: absolute;
+            top: -15px;
+            width: 0;
+            height: 0;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-top: 15px solid #ff006e;
         }
 
         /* FINAL SCREEN */
         .final-hearts {
-            font-size: 3rem;
-            margin: 20px 0;
+            font-size: 3.5rem;
+            margin: 25px 0;
             animation: heartBeat 1.5s ease-in-out infinite;
         }
 
         @keyframes heartBeat {
             0%, 100% { transform: scale(1); }
-            25% { transform: scale(1.3); }
+            25% { transform: scale(1.4); }
             50% { transform: scale(1); }
         }
 
         .status {
-            font-size: 1.1rem;
+            font-size: 1.15rem;
             font-weight: 700;
             color: #ff006e;
-            margin: 20px 0;
-            min-height: 25px;
+            margin: 22px 0;
+            min-height: 28px;
         }
 
         .from-text {
-            font-size: 1.3rem;
+            font-size: 1.35rem;
             color: #ee5a52;
             font-weight: 800;
-            margin: 20px 0;
+            margin: 22px 0;
         }
 
         .message-text {
-            font-size: 1.15rem;
+            font-size: 1.2rem;
             color: #555;
-            line-height: 2;
-            margin: 25px 0;
+            line-height: 2.1;
+            margin: 28px 0;
             font-weight: 500;
         }
 
@@ -488,36 +585,35 @@
             }
 
             h1 {
-                font-size: 2.5rem;
+                font-size: 2.8rem;
             }
 
             h2 {
-                font-size: 1.5rem;
+                font-size: 1.6rem;
             }
 
             .balloon {
-                width: 55px;
-                height: 75px;
+                width: 60px;
+                height: 80px;
                 font-size: 2rem;
             }
 
             .cake {
-                font-size: 100px;
-            }
-
-            .flame {
-                font-size: 40px;
-                top: -35px;
+                font-size: 110px;
             }
 
             .clicker-box {
-                width: 150px;
-                height: 150px;
-                font-size: 3rem;
+                width: 160px;
+                height: 160px;
+                font-size: 3.5rem;
             }
 
             .memory-grid {
                 grid-template-columns: repeat(3, 1fr);
+            }
+
+            .sequence-grid {
+                max-width: 280px;
             }
         }
     </style>
@@ -528,13 +624,13 @@
         <div id="screen1" class="screen active">
             <div class="badge">📩 Abisha sent you this message! 💝</div>
             <h1>🎉 HAPPY BIRTHDAY ASWIN! 🎉</h1>
-            <p style="font-size: 1.3rem; color: #ff006e; font-weight: 700;">You have a LEGENDARY birthday delivery!</p>
-            <p>From your friend <span style="color: #ee5a52; font-weight: 800;">Abisha</span> with TONS of love 💕</p>
-            <div class="emoji-large">🎂 🎈 🎁 🎊 🎉</div>
-            <p style="font-size: 1.15rem; font-weight: 600;">Complete 7 EPIC CHALLENGES to unlock your special birthday wishes!</p>
-            <p style="font-size: 0.95rem; color: #999;">This birthday celebration will be UNFORGETTABLE! 🚀</p>
+            <p style="font-size: 1.35rem; color: #ff006e; font-weight: 800;">You have a LEGENDARY birthday experience!</p>
+            <p>From your friend <span style="color: #ee5a52; font-weight: 800;">Abisha</span> with INFINITE love 💕</p>
+            <div class="emoji-large">🎂 🎈 🎁 🎊 🎉 🎆</div>
+            <p style="font-size: 1.2rem; font-weight: 700;">Complete 10 INSANE CHALLENGES!</p>
+            <p style="font-size: 0.98rem; color: #999;">This will be the MOST MEMORABLE birthday ever! 🚀⭐</p>
             <div class="buttons">
-                <button class="btn" onclick="goToScreen(2)">LET'S GO! 🎮</button>
+                <button class="btn" onclick="goToScreen(2)">UNLEASH THE FUN! 🎮</button>
             </div>
             <div class="progress-bar">
                 <div class="progress-fill" style="width: 0%;"></div>
@@ -543,8 +639,9 @@
 
         <!-- SCREEN 2: Balloon Pop -->
         <div id="screen2" class="screen">
-            <h2>🎈 Challenge 1: Pop the Balloons! 🎈</h2>
-            <p>Pop all 8 balloons to unlock the next challenge!</p>
+            <div class="challenge-number">1️⃣</div>
+            <h2>🎈 Pop the Balloons! 🎈</h2>
+            <p>Pop all 10 balloons to proceed!</p>
             <div class="balloon-container">
                 <div class="balloon" onclick="popBalloon(this)">🎈</div>
                 <div class="balloon" onclick="popBalloon(this)">🎈</div>
@@ -554,82 +651,90 @@
                 <div class="balloon" onclick="popBalloon(this)">🎈</div>
                 <div class="balloon" onclick="popBalloon(this)">🎈</div>
                 <div class="balloon" onclick="popBalloon(this)">🎈</div>
+                <div class="balloon" onclick="popBalloon(this)">🎈</div>
+                <div class="balloon" onclick="popBalloon(this)">🎈</div>
             </div>
-            <p class="status" id="balloonStatus">8 Balloons Left! 🎯</p>
+            <p class="status" id="balloonStatus">10 Balloons Left! 🎯</p>
             <div class="progress-bar">
-                <div class="progress-fill" style="width: 15%;"></div>
+                <div class="progress-fill" style="width: 10%;"></div>
             </div>
         </div>
 
         <!-- SCREEN 3: Cake & Candle -->
         <div id="screen3" class="screen">
-            <h2>🕯️ Challenge 2: Make a Wish! 🕯️</h2>
-            <p>Click the flame to blow out the candle and make your wish!</p>
+            <div class="challenge-number">2️⃣</div>
+            <h2>🕯️ Make a Wish! 🕯️</h2>
+            <p>Click the flame to blow out the candle!</p>
             <div onclick="blowCandle()">
                 <span id="flame" class="flame">🔥</span>
                 <div class="cake">🎂</div>
             </div>
             <p class="status" id="candleStatus">Click the flame! ⬆️</p>
             <div class="progress-bar">
-                <div class="progress-fill" style="width: 30%;"></div>
+                <div class="progress-fill" style="width: 20%;"></div>
             </div>
         </div>
 
         <!-- SCREEN 4: Quiz -->
         <div id="screen4" class="screen">
-            <h2>🧠 Challenge 3: Birthday Quiz! 🧠</h2>
-            <p>What's the #1 rule for YOUR birthday today?</p>
+            <div class="challenge-number">3️⃣</div>
+            <h2>🧠 Birthday Quiz! 🧠</h2>
+            <p>What's the #1 rule for YOUR birthday?</p>
             <div class="quiz-options">
                 <button class="quiz-btn" onclick="answerQuiz(true)">✅ Have unlimited fun & zero stress!</button>
-                <button class="quiz-btn" onclick="answerQuiz(false)">❌ Work all day long</button>
-                <button class="quiz-btn" onclick="answerQuiz(false)">❌ Study hard!</button>
-                <button class="quiz-btn" onclick="answerQuiz(false)">❌ No fun allowed</button>
+                <button class="quiz-btn" onclick="answerQuiz(false)">❌ Work all day</button>
+                <button class="quiz-btn" onclick="answerQuiz(false)">❌ Study hard</button>
+                <button class="quiz-btn" onclick="answerQuiz(false)">❌ Sleep all day</button>
             </div>
             <p class="status" id="quizStatus"></p>
             <div class="progress-bar">
-                <div class="progress-fill" style="width: 45%;"></div>
+                <div class="progress-fill" style="width: 30%;"></div>
             </div>
         </div>
 
         <!-- SCREEN 5: Memory Match -->
         <div id="screen5" class="screen">
-            <h2>🧩 Challenge 4: Memory Master! 🧩</h2>
-            <p>Find all matching pairs to proceed!</p>
+            <div class="challenge-number">4️⃣</div>
+            <h2>🧩 Memory Master! 🧩</h2>
+            <p>Find all 8 matching pairs!</p>
             <div class="memory-grid" id="memoryGrid"></div>
             <p class="status" id="memoryStatus">Find all pairs!</p>
             <div class="progress-bar">
-                <div class="progress-fill" style="width: 60%;"></div>
+                <div class="progress-fill" style="width: 40%;"></div>
             </div>
         </div>
 
         <!-- SCREEN 6: Speed Clicker -->
         <div id="screen6" class="screen">
-            <h2>⚡ Challenge 5: Speed Clicker! ⚡</h2>
-            <p>Click the box 15 times as fast as you can!</p>
+            <div class="challenge-number">5️⃣</div>
+            <h2>⚡ Speed Clicker! ⚡</h2>
+            <p>Click 20 times as fast as you can!</p>
             <div class="clicker-box" id="clickBox" onclick="handleClick()">👆</div>
-            <p class="status" id="clickCounter">0 / 15</p>
+            <p class="status" id="clickCounter">0 / 20</p>
             <div class="progress-bar">
-                <div class="progress-fill" style="width: 75%;"></div>
+                <div class="progress-fill" style="width: 50%;"></div>
             </div>
         </div>
 
         <!-- SCREEN 7: Slider Challenge -->
         <div id="screen7" class="screen">
-            <h2>🎚️ Challenge 6: Slide to Win! 🎚️</h2>
+            <div class="challenge-number">6️⃣</div>
+            <h2>🎚️ Slide to Win! 🎚️</h2>
             <p>Drag the slider all the way to the right!</p>
             <div class="slider-container">
                 <input type="range" min="0" max="100" value="0" class="slider" id="sliderInput" oninput="checkSlider()">
             </div>
             <p class="status" id="sliderStatus">Slide it! 📊</p>
             <div class="progress-bar">
-                <div class="progress-fill" style="width: 85%;"></div>
+                <div class="progress-fill" style="width: 60%;"></div>
             </div>
         </div>
 
         <!-- SCREEN 8: Button Sequence -->
         <div id="screen8" class="screen">
-            <h2>🎮 Challenge 7: Button Sequence! 🎮</h2>
-            <p>Click the buttons in order: RED → YELLOW → GREEN → BLUE!</p>
+            <div class="challenge-number">7️⃣</div>
+            <h2>🎮 Button Sequence! 🎮</h2>
+            <p>Click buttons in order: RED → YELLOW → GREEN → BLUE!</p>
             <div class="sequence-grid">
                 <button class="seq-btn" onclick="clickSequence(1)">1️⃣</button>
                 <button class="seq-btn" onclick="clickSequence(2)">2️⃣</button>
@@ -638,29 +743,66 @@
             </div>
             <p class="status" id="sequenceStatus">Click in order!</p>
             <div class="progress-bar">
+                <div class="progress-fill" style="width: 70%;"></div>
+            </div>
+        </div>
+
+        <!-- SCREEN 9: Typing Challenge -->
+        <div id="screen9" class="screen">
+            <div class="challenge-number">8️⃣</div>
+            <h2>⌨️ Type the Magic Word! ⌨️</h2>
+            <p>Type: <span style="color: #ff006e; font-weight: 800; font-size: 1.3rem;">ASWIN</span></p>
+            <input type="text" class="typing-input" id="typingInput" placeholder="Type here..." oninput="checkTyping()">
+            <p class="status" id="typingStatus">Keep typing!</p>
+            <div class="progress-bar">
+                <div class="progress-fill" style="width: 80%;"></div>
+            </div>
+        </div>
+
+        <!-- SCREEN 10: Rapid Fire -->
+        <div id="screen10" class="screen">
+            <div class="challenge-number">9️⃣</div>
+            <h2>🎯 Rapid Fire! 🎯</h2>
+            <p>Click the matching emoji! Score: <span id="rapidScore" style="color: #ff006e; font-weight: 800;">0</span></p>
+            <div class="rapid-grid" id="rapidGrid"></div>
+            <p class="status" id="rapidStatus">Click the matching emoji!</p>
+            <div class="progress-bar">
+                <div class="progress-fill" style="width: 90%;"></div>
+            </div>
+        </div>
+
+        <!-- SCREEN 11: Lucky Spin -->
+        <div id="screen11" class="screen">
+            <div class="challenge-number">🔟</div>
+            <h2>🎡 Lucky Spin! 🎡</h2>
+            <p>Click the wheel to spin and win!</p>
+            <div class="spinner" id="spinner" onclick="spinWheel()">🎰</div>
+            <p class="status" id="spinStatus">Click to spin!</p>
+            <div class="progress-bar">
                 <div class="progress-fill" style="width: 100%;"></div>
             </div>
         </div>
 
-        <!-- SCREEN 9: Final Screen -->
-        <div id="screen9" class="screen">
-            <p style="font-size: 1.3rem; font-weight: 700; color: #ff006e; margin-bottom: 20px;">🎉 YOU COMPLETED ALL CHALLENGES! 🎉</p>
-            <h1 style="font-size: 3.8rem;">HAPPY BIRTHDAY ASWIN 💙</h1>
-            <div class="final-hearts">💝 💕 💖 💗 💓 💘 💞</div>
+        <!-- SCREEN 12: Final Screen -->
+        <div id="screen12" class="screen">
+            <p style="font-size: 1.4rem; font-weight: 800; color: #ff006e; margin-bottom: 25px;">🎉🎉 YOU CONQUERED ALL 10 CHALLENGES! 🎉🎉</p>
+            <h1 style="font-size: 4.2rem;">HAPPY BIRTHDAY ASWIN 💙</h1>
+            <div class="final-hearts">💝 💕 💖 💗 💓 💘 💞 💟</div>
             <p class="from-text">With ENDLESS Love From: Abisha 💕</p>
-            <p class="message-text">Hope your day is filled with AMAZING joy, endless laughter, incredible moments, and everything you love! 🌟</p>
-            <p style="color: #ff006e; font-weight: 700; font-size: 1.2rem; margin: 20px 0;">You deserve the ABSOLUTE BEST birthday ever! 🚀✨</p>
-            <p style="color: #ee5a52; font-weight: 600; font-size: 1.05rem;">This is a day you'll NEVER FORGET! 🎊</p>
-            <div class="emoji-large">🎊 ✨ 🌈 🎆 🎇</div>
+            <p class="message-text">Hope your day is INCREDIBLY amazing with endless joy, nonstop laughter, unforgettable moments, and everything you love! 🌟</p>
+            <p style="color: #ff006e; font-weight: 800; font-size: 1.25rem; margin: 20px 0;">You deserve the ABSOLUTE BEST birthday ever! 🚀✨</p>
+            <p style="color: #ee5a52; font-weight: 700; font-size: 1.1rem;">This is a birthday you'll NEVER FORGET! 🎊</p>
+            <p style="color: #ffbe0b; font-weight: 700; font-size: 1rem;">Keep smiling, keep shining! 🌠</p>
+            <div class="emoji-large">🎊 ✨ 🌈 🎆 🎇 🌟</div>
             <div class="buttons">
-                <button class="btn" onclick="triggerMassiveConfetti()">MASSIVE CONFETTI! 🎊🎊🎊</button>
+                <button class="btn" onclick="triggerMassiveConfetti()">ULTIMATE CONFETTI! 🎊🎊🎊</button>
                 <button class="btn" onclick="location.reload()">Play Again! 🔄</button>
             </div>
         </div>
     </div>
 
     <script>
-        let balloonsLeft = 8;
+        let balloonsLeft = 10;
         let quizAnswered = false;
         let candleBlown = false;
         let memoryCards = [];
@@ -668,13 +810,9 @@
         let matchedPairs = 0;
         let clickCount = 0;
         let sequenceStep = 1;
-
-        function updateProgress(percent) {
-            const fills = document.querySelectorAll('.progress-fill');
-            fills.forEach(fill => {
-                fill.style.width = percent + '%';
-            });
-        }
+        let rapidScore = 0;
+        let rapidTarget = 0;
+        let isSpinning = false;
 
         function goToScreen(screenNum) {
             document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
@@ -690,7 +828,7 @@
                 element.classList.add('popped');
                 balloonsLeft--;
                 document.getElementById('balloonStatus').textContent = balloonsLeft === 0 ? '🎉 LEVEL COMPLETE! 🎉' : `${balloonsLeft} Balloons Left! 🎯`;
-                confetti({ particleCount: 40, spread: 50, origin: { y: 0.7 } });
+                confetti({ particleCount: 45, spread: 55, origin: { y: 0.7 } });
 
                 if (balloonsLeft === 0) {
                     setTimeout(() => goToScreen(3), 1000);
@@ -706,8 +844,8 @@
                 flame.style.display = 'none';
                 document.getElementById('candleStatus').textContent = '✨ Wish Made! Dreams coming true! ✨';
                 document.getElementById('candleStatus').style.color = '#ff006e';
-                document.getElementById('candleStatus').style.fontSize = '1.15rem';
-                confetti({ particleCount: 80, spread: 75, origin: { y: 0.5 } });
+                document.getElementById('candleStatus').style.fontSize = '1.2rem';
+                confetti({ particleCount: 85, spread: 80, origin: { y: 0.5 } });
                 setTimeout(() => goToScreen(4), 1500);
             }
         }
@@ -719,10 +857,10 @@
             const status = document.getElementById('quizStatus');
 
             if (isCorrect) {
-                status.textContent = '✅ CORRECT! You get unlimited fun today!';
+                status.textContent = '✅ CORRECT! Unlimited fun unlocked!';
                 status.style.color = '#06d6a0';
-                status.style.fontSize = '1.2rem';
-                confetti({ particleCount: 60, spread: 60, origin: { y: 0.7 } });
+                status.style.fontSize = '1.25rem';
+                confetti({ particleCount: 70, spread: 65, origin: { y: 0.7 } });
                 setTimeout(() => initMemory(), 800);
                 setTimeout(() => goToScreen(5), 800);
             } else {
@@ -775,7 +913,7 @@
                     card1.classList.add('matched');
                     card2.classList.add('matched');
                     matchedPairs++;
-                    confetti({ particleCount: 50, spread: 60, origin: { y: 0.7 } });
+                    confetti({ particleCount: 55, spread: 65, origin: { y: 0.7 } });
 
                     if (matchedPairs === 4) {
                         document.getElementById('memoryStatus').textContent = '🎉 Perfect Match!';
@@ -798,12 +936,12 @@
             box.classList.add('clicked');
             setTimeout(() => box.classList.remove('clicked'), 200);
 
-            document.getElementById('clickCounter').textContent = `${clickCount} / 15`;
+            document.getElementById('clickCounter').textContent = `${clickCount} / 20`;
 
-            if (clickCount === 15) {
+            if (clickCount === 20) {
                 document.getElementById('clickBox').style.pointerEvents = 'none';
                 document.getElementById('clickCounter').textContent = '🎉 Complete!';
-                confetti({ particleCount: 150, spread: 100, origin: { y: 0.6 } });
+                confetti({ particleCount: 160, spread: 105, origin: { y: 0.6 } });
                 setTimeout(() => goToScreen(7), 1200);
             }
         }
@@ -814,11 +952,11 @@
             const status = document.getElementById('sliderStatus');
             
             if (slider.value >= 100) {
-                status.textContent = '✅ PERFECT! You won! 🎉';
+                status.textContent = '✅ PERFECT! 🎉';
                 status.style.color = '#06d6a0';
-                status.style.fontSize = '1.2rem';
+                status.style.fontSize = '1.25rem';
                 slider.style.pointerEvents = 'none';
-                confetti({ particleCount: 100, spread: 80, origin: { y: 0.6 } });
+                confetti({ particleCount: 110, spread: 85, origin: { y: 0.6 } });
                 setTimeout(() => goToScreen(8), 1200);
             } else {
                 status.textContent = `Progress: ${slider.value}%`;
@@ -836,34 +974,107 @@
                 if (sequenceStep > 4) {
                     document.getElementById('sequenceStatus').textContent = '🎉 PERFECT SEQUENCE! 🎉';
                     document.getElementById('sequenceStatus').style.color = '#06d6a0';
-                    document.getElementById('sequenceStatus').style.fontSize = '1.2rem';
+                    document.getElementById('sequenceStatus').style.fontSize = '1.25rem';
                     document.querySelectorAll('.seq-btn').forEach(b => b.style.pointerEvents = 'none');
-                    confetti({ particleCount: 120, spread: 90, origin: { y: 0.6 } });
+                    confetti({ particleCount: 125, spread: 95, origin: { y: 0.6 } });
                     setTimeout(() => goToScreen(9), 1500);
                 }
             } else {
-                document.getElementById('sequenceStatus').textContent = '❌ Wrong order! Try again!';
+                document.getElementById('sequenceStatus').textContent = '❌ Wrong order!';
                 document.getElementById('sequenceStatus').style.color = '#ef4444';
                 sequenceStep = 1;
             }
         }
 
+        // GAME 8: Typing
+        function checkTyping() {
+            const input = document.getElementById('typingInput');
+            const status = document.getElementById('typingStatus');
+            
+            if (input.value.toUpperCase() === 'ASWIN') {
+                status.textContent = '✅ PERFECT! 🎉';
+                status.style.color = '#06d6a0';
+                status.style.fontSize = '1.25rem';
+                input.style.pointerEvents = 'none';
+                confetti({ particleCount: 100, spread: 80, origin: { y: 0.6 } });
+                setTimeout(() => initRapidFire(), 1200);
+                setTimeout(() => goToScreen(10), 1200);
+            } else {
+                status.textContent = 'Keep typing!';
+            }
+        }
+
+        // GAME 9: Rapid Fire
+        function initRapidFire() {
+            rapidScore = 0;
+            document.getElementById('rapidScore').textContent = '0';
+            const grid = document.getElementById('rapidGrid');
+            grid.innerHTML = '';
+            
+            const emojis = ['😀', '🎈', '🎂', '🎈', '🎉', '😀', '🎂', '🎉', '😀'];
+            const shuffled = emojis.sort(() => Math.random() - 0.5);
+            rapidTarget = emojis[0];
+            
+            shuffled.forEach(emoji => {
+                const btn = document.createElement('button');
+                btn.className = 'rapid-btn';
+                btn.textContent = emoji;
+                btn.onclick = () => checkRapidFire(emoji, btn);
+                grid.appendChild(btn);
+            });
+        }
+
+        function checkRapidFire(emoji, btn) {
+            if (emoji === rapidTarget) {
+                btn.classList.add('correct');
+                rapidScore++;
+                document.getElementById('rapidScore').textContent = rapidScore;
+                confetti({ particleCount: 30, spread: 50, origin: { y: 0.7 } });
+                
+                if (rapidScore >= 5) {
+                    document.getElementById('rapidStatus').textContent = '🎉 YOU WON! 🎉';
+                    document.getElementById('rapidStatus').style.color = '#06d6a0';
+                    document.querySelectorAll('.rapid-btn').forEach(b => b.style.pointerEvents = 'none');
+                    confetti({ particleCount: 120, spread: 90, origin: { y: 0.6 } });
+                    setTimeout(() => goToScreen(11), 1500);
+                }
+            }
+        }
+
+        // GAME 10: Spin
+        function spinWheel() {
+            if (isSpinning) return;
+            isSpinning = true;
+            
+            const spinner = document.getElementById('spinner');
+            spinner.classList.add('spinning');
+            
+            confetti({ particleCount: 130, spread: 100, origin: { y: 0.5 } });
+            
+            setTimeout(() => {
+                document.getElementById('spinStatus').textContent = '🎉 YOU WON! 🎉';
+                document.getElementById('spinStatus').style.color = '#06d6a0';
+                document.getElementById('spinStatus').style.fontSize = '1.25rem';
+                setTimeout(() => goToScreen(12), 1500);
+            }, 2500);
+        }
+
         // Final Confetti
         function triggerMassiveConfetti() {
-            var duration = 8 * 1000;
+            var duration = 10 * 1000;
             var animationEnd = Date.now() + duration;
-            var defaults = { startVelocity: 60, spread: 360, ticks: 100, zIndex: 0 };
+            var defaults = { startVelocity: 70, spread: 360, ticks: 120, zIndex: 0 };
 
             var interval = setInterval(function() {
                 var timeLeft = animationEnd - Date.now();
                 if (timeLeft <= 0) return clearInterval(interval);
 
-                var particleCount = 150 * (timeLeft / duration);
+                var particleCount = 200 * (timeLeft / duration);
                 confetti(Object.assign({}, defaults, {
                     particleCount,
                     origin: { x: Math.random(), y: Math.random() - 0.2 }
                 }));
-            }, 100);
+            }, 80);
         }
     </script>
 </body>
